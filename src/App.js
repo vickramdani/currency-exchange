@@ -12,8 +12,6 @@ function App() {
   const [amount, setAmount] = useState(10);
   const [toCurrency, setToCurrency] = useState();
 
-  console.log(selectedCurr);
-
   useEffect(() => {
     if (toCurrency != null) {
       fetchExchangeRates();
@@ -23,10 +21,6 @@ function App() {
   const fetchExchangeRates = async () => {
     //const response = await axios(`${BASE_URL}&symbols=${toCurrency}`);
     // console.log(response.data.rates);
-    // setSelectedCurr([
-    //   ...selectedCurr,
-    //   { rates: Object.values(response.data.rates).toString() }
-    // ]);
     const response = await fetch(`${BASE_URL}&symbols=${toCurrency}`);
     const data = await response.json();
 

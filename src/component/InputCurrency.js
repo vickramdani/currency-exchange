@@ -9,6 +9,7 @@ function InputCurrency({ onChangeAmount, amount }) {
           type="number"
           value={amount}
           onChange={onChangeAmount}
+          maxLength="9"
         />
         <p className="base-currency-full">USD - United States Dollars</p>
         <h2 className="base-currency">USD</h2>

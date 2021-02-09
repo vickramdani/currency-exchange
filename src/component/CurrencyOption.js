@@ -2,20 +2,21 @@ import React from "react";
 import Select from "react-select";
 
 const options = [
-  { value: "CAD", label: "Canadian Dollar (CAD)" },
-  { value: "IDR", label: "Indonesian Rupiah (IDR)" },
-  { value: "GBP", label: "Britain Pound sterling (GBP)" },
-  { value: "CHF", label: "Swiss Franc (CHF)" },
-  { value: "SGD", label: "Singapore Dollar (SGD)" },
-  { value: "INR", label: "Indian Rupee (INR)" },
-  { value: "MYR", label: "Malaysian Ringgit (MYR)" },
-  { value: "JPY", label: "Japanese Yen (JPY)" },
-  { value: "KRW", label: "South Korean Won (KRW)" }
+  { value: "CAD", label: "Canadian Dollar" },
+  { value: "EUR", label: "Euro" },
+  { value: "IDR", label: "Indonesian Rupiah" },
+  { value: "GBP", label: "Britain Pound sterling" },
+  { value: "CHF", label: "Swiss Franc" },
+  { value: "SGD", label: "Singapore Dollar" },
+  { value: "INR", label: "Indian Rupee" },
+  { value: "MYR", label: "Malaysian Ringgit" },
+  { value: "JPY", label: "Japanese Yen" },
+  { value: "KRW", label: "South Korean Won" }
 ];
 
 function CurrencyOption({ selectedCurr, handleChange }) {
   return (
-    <div>
+    <div className="option">
       <Select
         placeholder="Select Currency"
         options={options}

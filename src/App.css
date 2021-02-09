@@ -9,6 +9,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
+  background-color: #ee957d;
+}
+
+.App {
+  padding: 0px 20px;
 }
 
 .input-number {
@@ -17,23 +23,88 @@ body {
 
 .input {
   margin: 30px 0px;
+  padding: 0px 30px;
   font-size: 30px;
-  width: 350px;
-  height: 150px;
+  height: 180px;
   border-radius: 10px;
-  border: 2px #000 solid;
   text-align: end;
+  border: 2px solid #ee957d;
+}
+
+.input,
+.curr-list {
+  width: 35vw;
 }
 
 .base-currency-full {
   position: absolute;
-  bottom: 130px;
+  bottom: 150px;
   left: 20px;
   font-style: italic;
 }
 
 .base-currency {
   position: absolute;
-  bottom: 90px;
+  bottom: 110px;
   left: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 30%;
+}
+
+.curr-list {
+  padding: 30px 20px;
+  margin: 15px 0px;
+  background-color: rgb(255, 239, 174);
+  border: 2px solid #ee957d;
+  color: #000;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.curr-symbol {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 8px 0px;
+}
+
+.curr-label,
+.curr-rates {
+  margin-top: 8px;
+  font-size: 14.5px;
+}
+
+.curr-amount {
+  padding-top: 5px;
+  margin: 0px 20px;
+  text-align: end;
+}
+
+.delete-btn {
+  margin-top: 35px;
+  border: none;
+  background-color: rgb(255, 239, 174);
+  cursor: pointer;
+  color: rgb(168, 165, 165);
+}
+
+.delete-btn:hover {
+  color: rgb(180, 21, 21);
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.option {
+  margin: 20px 0px;
 }
