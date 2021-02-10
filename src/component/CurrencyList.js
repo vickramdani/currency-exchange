@@ -4,7 +4,7 @@ function CurrencyList({ selectedCurr, amount, removeCurrency }) {
   return (
     <div className="container">
       {selectedCurr.map(currencies => (
-        <div className="curr-list" key={currencies.currency}>
+        <div className="curr-list">
           <div>
             <p className="curr-symbol">{currencies.currency}</p>
             <p className="curr-label">

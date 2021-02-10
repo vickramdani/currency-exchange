@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import Header from "./component/Header";
 import InputCurrency from "./component/InputCurrency";
 import CurrencyList from "./component/CurrencyList";
 import CurrencyOption from "./component/CurrencyOption";
@@ -19,8 +20,6 @@ function App() {
   }, [toCurrency]);
 
   const fetchExchangeRates = async () => {
-    //const response = await axios(`${BASE_URL}&symbols=${toCurrency}`);
-    // console.log(response.data.rates);
     const response = await fetch(`${BASE_URL}&symbols=${toCurrency}`);
     const data = await response.json();
 
@@ -51,6 +50,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <InputCurrency onChangeAmount={handleFromAmountChange} amount={amount} />
       <CurrencyList
         amount={amount}
