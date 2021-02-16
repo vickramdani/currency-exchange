@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./component/Header";
 import InputCurrency from "./component/InputCurrency";
@@ -39,17 +40,27 @@ function App() {
     setSelectedCurr(selectedCurr.filter(item => item.currency !== curr));
   };
 
+  const removeDuplicate = (arr, key) => {
+    return arr.reduce((arr, item) => {
+      const remove = arr.filter(i => i[key] !== item[key]);
+      return [...remove, item];
+    }, []);
+  }
+
   const handleFromAmountChange = e => {
     setAmount(e.target.value);
   };
 
   const handleChange = e => {
-    setSelectedCurr([...selectedCurr, { currency: e.value, label: e.label }]);
+    setSelectedCurr(removeDuplicate(([...selectedCurr, { currency: e.value, label: e.label }]), "currency"));
     setToCurrency(e.value);
+    // removeDuplicate(selectedCurr, "currency")
   };
+  // console.log(removeDuplicate(selectedCurr, "currency"));
+
 
   return (
-    <div className="App">
+    <div className="App container">
       <Header />
       <InputCurrency onChangeAmount={handleFromAmountChange} amount={amount} />
       <CurrencyList

@@ -3,7 +3,7 @@ import Select from "react-select";
 
 const options = [
   { value: "CAD", label: "Canadian Dollar" },
-  { value: "EUR", label: "Euro" },
+  { value: "EUR", label: "European Euro" },
   { value: "IDR", label: "Indonesian Rupiah" },
   { value: "GBP", label: "Britain Pound sterling" },
   { value: "CHF", label: "Swiss Franc" },
