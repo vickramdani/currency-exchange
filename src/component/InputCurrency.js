@@ -5,7 +5,7 @@ function InputCurrency({ onChangeAmount, amount }) {
     <div className="input-number">
       <input
         className="input"
-        type="text"
+        type="number"
         value={amount}
         onChange={onChangeAmount}
         maxLength={11}
