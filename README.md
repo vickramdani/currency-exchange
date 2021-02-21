@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Currency Exchange
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can access here:
+[https://curr-exchange.netlify.com](https://curr-exchange.netlify.com)
+
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can setup:
+
+### `npm install`
+
+After that, you can run:
 
 ### `npm start`
 
